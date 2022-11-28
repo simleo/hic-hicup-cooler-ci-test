@@ -1,0 +1,20 @@
+version: 1.2
+workflows:
+- name: hic-tabix-cool-cooler
+  primaryDescriptorPath: /hic_tabix_to_cool_cooler.ga
+  subclass: Galaxy
+- name: chic-fastq-to-cool-hicup-cooler
+  primaryDescriptorPath: /chic_fastq_to_cool_hicup_cooler.ga
+  subclass: Galaxy
+  testParameterFiles:
+  - /chic_fastq_to_cool_hicup_cooler-tests.yml
+- name: hic-fastq-to-cool-hicup-cooler
+  primaryDescriptorPath: /hic_fastq_to_cool_hicup_cooler.ga
+  subclass: Galaxy
+  testParameterFiles:
+  - /hic_fastq_to_cool_hicup_cooler-tests.yml
+- name: hic-fastq-to-pairs-hicup
+  primaryDescriptorPath: /hic_fastq_to_pairs_hicup.ga
+  subclass: Galaxy
+  testParameterFiles:
+  - /hic_fastq_to_pairs_hicup-tests.yml
